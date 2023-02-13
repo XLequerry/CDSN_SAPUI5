@@ -1,2 +1,3 @@
 04:在这里其实sap.ui5.walkthrough就相当于webapp这个路径？
-05:由html→js→View→controller？
+05:由html→js→View→controller？(是对的）
+    data-sap-ui-oninit→View.create→View.xml(controllerName)→controller

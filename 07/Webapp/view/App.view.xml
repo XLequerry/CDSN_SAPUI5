@@ -1,0 +1,19 @@
+<mvc:View
+        controllerName = "sap.ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Button
+        text = "say Hello"
+        press=".onShowHello"
+    />
+    <Input
+        value="{/recipient/name}"
+        description="Hello {/recipient/name}"
+        valueLiveUpdate="true"
+        width="60%"/>
+</mvc:View>
+
+<!--指向了当前view所需的controller名称-->
+<!--mvc：View等同于sap.ui.core.mvc.View-->
+<!--{/***}为模型绑定路径语法 把input中的Value值绑定到recippient的name上去（JSON模型）-->
+<!--ValueLiveUpdate为双向绑定，数据在视图和模型中进行双向流转，目前为开-->
