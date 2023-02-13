@@ -1,0 +1,13 @@
+<mvc:View
+        controllerName = "sap.ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Button
+        text = "say Hello"
+        press=".onShowHello"
+    />
+</mvc:View>
+
+<!--指向了当前view所需的controller名称-->
+<!--mvc：View等同于sap.ui.core.mvc.View-->
+<!--xmlns=“sap。m”定义默认命名空间，使下边的button不用写成sap.ui.core.mvc.View-->

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SAPUI5 Walkthrough</title>
+    <script
+            id="sap-ui-bootstrap"
+
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+
+            data-sap-ui-async="true"
+            data-sap-ui-resourceroots='{"sap.ui5.walkthrough":"./"}'
+            data-sap-ui-oninit = "module:sap/ui5/walkthrough/index">
+    </script>
+    <!--            1.SAP UI5引导文件
+                    2.同事执行多个异步加载所有网络请求
+                    3.定义命名空间，使框架知道所有的资源文件都要从当前目录下去检索和加载
+                    4.指定完整module路径-->
+
+
+</head>
+<body>
+<!--容器 生成控件之后放置的位置-->
+    <div class="sapUiBody" id="content"></div>
+</body>
+</html>
+
+
+
