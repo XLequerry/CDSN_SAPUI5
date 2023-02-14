@@ -1,8 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
-    "sap/ui/model/json/JSONModel"//因为在XML界面的模型绑定语句属于json所以要导入json模块进行实现
-    "sap/ui/model/resource/ResoueceModel"
+    "sap/ui/model/json/JSONModel",//因为在XML界面的模型绑定语句属于json所以要导入json模块进行实现
+    "sap/ui/model/resource/ResourceModel"
 ], function (Controller,MessageToast,JSONModel,ResourceModel){
     "use strict";
     return Controller.extend("sap.ui5.walkthrough.controller.App",{
