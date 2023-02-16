@@ -1,0 +1,15 @@
+/*
+    a.该元素必须是该HTML页面html元素的子节点
+    b.该元素必须是具有CSS 类.myAppDemoWT元素的子节点
+    c.该元素自身必须同时具备myCustomButton和sapMBtn两个CSS类
+*/
+
+html .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 10px;
+}
+
+.myAppDemoWT .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+    color: red;
+}
