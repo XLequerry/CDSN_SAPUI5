@@ -20,7 +20,7 @@ sap.ui.define([
             }
             this.pDialog.then(function (oDialog){//这才是真正的打开dialog的方法
                 oDialog.open();
-            })
+            });
         },
         onCloseDialog:function (){
             this.byId("helloDialog").close();

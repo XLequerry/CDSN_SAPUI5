@@ -7,7 +7,7 @@
         <content>
             <core:Icon
                 src="sap-icon://hello-world"
-                size="Brem"
+                size="8rem"
                 class="sapUiMediumMargin"/>
         </content>
         <beginButton>
