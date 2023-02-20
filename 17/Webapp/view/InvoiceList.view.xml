@@ -1,0 +1,20 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}">
+<!--        聚合绑定
+            指向0个或者多个行项目（items）
+            >/前的invoice为json的模型名称
+            后的Invoice为json的字段名，且必须是数组-->
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} X {invoice>ProductName}"/>
+<!--            列表行通过title显示数据项目-->
+        </items>
+
+    </List>
+</mvc:View>
