@@ -1,0 +1,32 @@
+<mvc:View
+        controllerName="sap.ui5.walkthrough.controller.InvoiceList"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <List
+        headText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}">
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} X {invoice>ProductName}"
+                number="{
+                    parts:[{path: 'invoice>ExtendedPrice'},{path:'view>/currency'}],
+                    type:'sap.ui.model.type.Currency',
+                    formatOptions: {
+                        showMeasure: false,
+                        preserveDecimals: false
+                    }
+                }"
+                numberUnit="{view>/currency}"
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
+
+            />
+<!--            这里的相对绑定和绝对绑定很典型
+                invoice>ExtendedPrice就指的是invoice.json内的键值
+                view>/currency就指的是当前controller中的model中的currency了-->
+
+<!--        preserveDecimals: false指的是四舍五入并保留两位-->
+        </items>
+    </List>
+</mvc:View>
