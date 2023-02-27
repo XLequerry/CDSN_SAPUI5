@@ -1,0 +1,96 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+	  "id": "sap.ui5.walkthrough",
+	  "type": "application",
+	  "i18n": "i18n/i18n.properties",
+	  "title": "{{appTitle}}",
+	  "description": "{{appDescription}}",
+	  "applicationVersion": {
+		"version": "1.0.0"
+	  },
+	  "dataSources": {
+		"invoiceRemote": {
+			"uri": "https://services.odata.org/V2/Northwind/Northwind.svc/",
+			"type": "OData",
+			"settings": {
+				"odataVersion": "2.0"
+			}
+		}
+	}
+	},
+	"sap.ui": {
+	  "technology": "UI5",
+	  "deviceTypes": {
+		  "desktop": true,
+		  "tablet": true,
+		  "phone": true
+	  }
+	},
+	"sap.ui5": {
+	  "rootView": {
+		  "viewName": "sap.ui5.walkthrough.view.App",
+		  "type": "XML",
+		  "id": "app"
+	  },
+	  "dependencies": {
+		"minUI5Version": "1.93",
+		"libs": {
+		  "sap.ui.core": {},
+		  "sap.m": {}
+		}
+	  },
+	  "models": {
+		"i18n": {
+		  "type": "sap.ui.model.resource.ResourceModel",
+		  "settings": {
+			"bundleName": "sap.ui5.walkthrough.i18n.i18n",
+			"supportedLocales": [""],
+			"fallbackLocale": ""
+		  }
+		},
+		"invoice": {
+			"dataSource": "invoiceRemote"
+		}
+	  },
+	  "routing": {
+		"config": {
+		  "routerClass": "sap.m.routing.Router",//标准router类
+		  "viewType": "XML",
+		  "viewPath": "sap. ui5.walkthrough.view",//指定视图的命名空间
+		  "controlId": "app",
+		  "controlAggregation": "pages"
+		},
+		"routes": [
+		  {
+			//判断url中，进入的到底是什么路由规则，这里就是如果url是“”那么就进入overview（默认界面）
+			"pattern": "",
+			"name": "overview",
+			"target": "overview"
+		  },
+		  {
+			"pattern": "detail",
+			"name": "detail",
+			"target": "detail"
+		  }
+		],
+		"targets": {
+		  "overview": {
+			"viewId": "overview",//与上边router对应的view名称
+			"viewName": "Overview"//真实的view文件的名称（有点像键值对）
+		  },
+		  "detail": {
+			"viewId": "detail",
+			"viewName": "Detail"
+		  }
+		}
+	  },
+	  "resources": {
+		"css": [
+		  {
+			"uri": "css/style.css"
+		  }
+		]
+	  }
+	}
+  }

@@ -1,0 +1,10 @@
+<mvc:View
+	controllerName="sap.ui5.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<Shell>
+		<App class="myAppDemoWT" id="app"/>
+<!--		此处的app，加载了manifest中，能成功匹配上的，路由对应的xml文件。都加载到了这个app控件中-->
+	</Shell>
+</mvc:View>

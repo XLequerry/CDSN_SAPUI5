@@ -1,0 +1,21 @@
+{
+  "name": "sap.m.tutorial.walkthrough.04",
+  "version": "1.0.0",
+  "author": "Tim",
+  "description": "sap教程4",
+  "scripts": {
+    "start": "Webapp/node_modules/.bin/ui5 serve",
+    "proxy": "node proxy.js",
+    "proxy:debug": "node --inspect-brk proxy.js"
+  },
+  "dependencies": {
+    "@openui5/themelib_sap_fiori_3": "^1",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "http-proxy": "^1.18.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.0.0"
+  }
+}

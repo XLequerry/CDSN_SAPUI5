@@ -1,0 +1,2 @@
+30.用户的点击事件存在oEvent里，oEvent取出source放到oItem里。
+    从oItem里拿出来的invoice放到invoice Path里，再把Path里的东西通过navTo传入路由中

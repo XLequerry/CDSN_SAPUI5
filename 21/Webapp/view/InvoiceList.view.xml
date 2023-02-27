@@ -21,7 +21,7 @@
                 numberUnit="{view>/currency}"
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
 
-            />
+            >
 <!--            这里的相对绑定和绝对绑定很典型
                 invoice>ExtendedPrice就指的是invoice.json内的键值
                 view>/currency就指的是当前controller中的model中的currency了-->
@@ -30,9 +30,12 @@
         <firstStatus>
             <ObjectStatus text="{
                 path: 'invoice>Status',
-                fomatter: '.formatter.statusText
+                formatter: '.formatter.statusText'
             }"/>
+<!--           .formatter指的是格式器在这个XML控制器里，也就是Invoice List.controller，并且名称叫formatter
+                status Text是指使用controller中的这个名字的方法，比如传进去ABC，传出来new in process等等-->
         </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>

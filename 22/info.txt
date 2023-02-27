@@ -1,0 +1,14 @@
+04:在这里其实sap.ui5.walkthrough就相当于webapp这个路径？
+05:由html→js→View→controller？(是对的）
+    data-sap-ui-oninit→View.create→View.xml(controllerName)→controller
+06:controller中的数组与function中的回调函数是顺序对应而不是名称对应，可以随意更改名称只要和下方调用时对应即可
+07:js中return后extend前内容应该是和当前文件功能有关（component/controller...)同时影响后边的extend内容？
+09:component此处替换掉了index.js中初始化XMLView的内容（viewname）还有Controller中OnInit的功能？但是index中还是要有引用Component的过程
+    目前的调用顺序：html->js->component->View+i18n->controller
+10:json不允许使用注释
+    sap.ui5中的rootview原本为在Component.js中维护的metadata
+15:这里的一些宗旨就是一般汉字全写在i18n里，程序内只调用不直接写字上去。
+    大概是在引用文件路径时候用的是sap"."ui5引用官方组件的时候用的是sap'/'ui5
+
+
+
